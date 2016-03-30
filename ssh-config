@@ -1,0 +1,32 @@
+# ~/.ssh/config
+# make sure keys are set and sshd_config is correct
+
+Host avalon
+  HostName 162.210.250.42
+  User root
+  DynamicForward 8888
+  LocalForward 3128 162.210.250.42:3128
+
+Host agartha
+  HostName 192.168.88.254
+	User root
+
+Host gl
+  HostName 162.210.250.43
+  User root
+
+Host web
+  HostName 162.210.250.44
+  User root
+
+Host demos
+  Hostname 162.210.250.45
+  User root
+
+Host mail
+  Hostname 162.210.250.46
+  User root
+
+Host debug
+  Hostname 192.168.88.233
+  User root
