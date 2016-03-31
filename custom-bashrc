@@ -13,3 +13,4 @@ alias tail="multitail"
 alias ssh="ssh -A"
 alias sgrep="grep -rnE"
 alias ls='ls $LS_OPTIONS'
+alias ports='netstat -tlpn | sort -t: -k2,2 -h'
