@@ -8,7 +8,7 @@ fi
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 
-alias du=" find . -maxdepth 1 -type d -exec du -sh '{}' \; | sort -h"
+alias du=" find . -maxdepth 1 -exec du -sh '{}' \; | sort -h"
 alias top="glances"
 alias tail="multitail"
 alias ssh="ssh -AX"
