@@ -8,9 +8,14 @@ fi
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 
-alias top="htop"
+alias du=" find . -maxdepth 1 -type d -exec du -sh '{}' \; | sort -h"
+alias top="glances"
 alias tail="multitail"
-alias ssh="ssh -A"
-alias sgrep="grep -rnE"
+alias ssh="ssh -AX"
 alias ls='ls $LS_OPTIONS'
 alias ports='netstat -tlpn | sort -t: -k2,2 -h'
+
+function sgrep {
+  grep -rn $@ .
+}
+
