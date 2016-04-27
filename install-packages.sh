@@ -2,8 +2,14 @@ SUDO=''
 if [ -e "`which sudo`" ]; then
   SUDO="`which sudo`"
 fi
-
+#Editor stuff
 $SUDO apt-get install -y vim
-$SUDO apt-get install -y multitail
-$SUDO apt-get install -y htop
-$SUDO apt-get install -y astyle
+
+#Filter stuff
+$SUDO apt-get install -y multitail grc grcat
+
+#Monitoring
+$SUDO apt-get install -y glances htop iotop lm-sensors ipmitool pv
+
+#Debug
+$SUDO apt-get install -y nmap tcp tcptraceroute tcpdump wireshark iperf speedtest-cli
