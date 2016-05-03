@@ -10,6 +10,9 @@ export LS_OPTIONS='--color=auto'
 
 alias ls='ls $LS_OPTIONS'
 
+alias cat="grc cat"
+alias head="grc head"
+alias tail="grc tail"
 alias ping="grc ping"
 alias dig="grc dig"
 alias gcc="grc gcc"
@@ -18,19 +21,16 @@ alias ps="grc ps"
 alias ifconfig="sudo grc ifconfig"
 alias traceroute="sudo grc -c conf.traceroute tcptraceroute"
 alias df="grc df"
+alias netstat="grc netstat"
 
 alias apt="sudo apt"
 alias top="glances"
 alias ssh="ssh -AX"
 
-alias ports='netstat -tlpn | sort -t: -k2,2 -h'
-alias netping='nmap -oG - -sP `ipi | cut -d" " -f6` | tr -s " " | grep Host | tr " " "\t" | grc -c conf.traceroute cat -'
+alias ports='grc netstat -64lpn | sort -t: -k2,2 -h'
+alias netping='nmap -oG - -sP `ipi | cut -d" " -f6` | tr -s " " | grep Host | tr " " "\t" | grcat -c conf.traceroute'
 alias du="find . -maxdepth 1 -exec du -sh '{}' \; | grc -c conf.ls sort -h"
-alias drives='ls /dev | grep -E "[h|s|v]d[a-z]$" | xargs -n1 -I% sudo sdparm -i /dev/% | grc -c conf.ldap cat -'
-
-function netstat {
-        sudo grc netstat $@
-}
+alias drives='ls /dev | grep -E "[h|s|v]d[a-z]$" | xargs -n1 -I% sudo grc -c conf.ldap sdparm -i /dev/%'
 
 function ipi {
         ip route | grep `ip route | grep default | cut -d" " -f5` | grep -v "169.254.0.0" | tr -d "\n" | tr -s " " | cut -d" " -f1,2,3,4,5,6,13,14
