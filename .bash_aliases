@@ -6,9 +6,8 @@ else
 fi
 
 eval "`dircolors`"
-export LS_OPTIONS='--color=auto'
 
-alias ls='ls $LS_OPTIONS'
+alias ls='ls -alh --color=auto'
 
 alias cat="grc cat"
 alias head="grc head"
