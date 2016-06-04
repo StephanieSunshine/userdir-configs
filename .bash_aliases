@@ -8,7 +8,7 @@ fi
 eval "`dircolors`"
 
 alias ls='ls -alh --color=auto'
-
+alias gem='rvmsudo gem'
 alias cat="grc cat"
 alias head="grc head"
 alias tail="grc tail"
