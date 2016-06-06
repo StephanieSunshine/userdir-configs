@@ -5,6 +5,8 @@ else
   export TERM='xterm-color'
 fi
 
+export rvmsudo_secure_path=1
+
 eval "`dircolors`"
 
 alias ls='ls -alh --color=auto'
@@ -25,6 +27,8 @@ alias netstat="grc netstat"
 alias apt="sudo apt"
 alias top="glances"
 alias ssh="ssh -AX"
+alias sshfs="sshfs -C -o reconnect,follow_symlinks,large_read,intr"
+
 
 alias ports='grc netstat -64lpn | sort -t: -k2,2 -h'
 alias netping='nmap -oG - -sP `ipi | cut -d" " -f6` | tr -s " " | grep Host | tr " " "\t" | grcat -c conf.traceroute'
