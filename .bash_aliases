@@ -28,7 +28,7 @@ alias apt="sudo apt"
 alias top="glances"
 alias ssh="ssh -AX"
 alias sshfs="sshfs -C -o reconnect,follow_symlinks,large_read,intr"
-
+alias systemctl="sudo systemctl"
 
 alias ports='grc netstat -64lpn | sort -t: -k2,2 -h'
 alias netping='nmap -oG - -sP `ipi | cut -d" " -f6` | tr -s " " | grep Host | tr " " "\t" | grcat -c conf.traceroute'
