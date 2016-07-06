@@ -9,6 +9,9 @@ export rvmsudo_secure_path=1
 
 eval "`dircolors`"
 
+alias production='RAILS_ENV=production RACK_ENV=production RUBY_ENV=production'
+alias development='RAILS_ENV=development RACK_ENV=development RUBY_ENV=development'
+
 alias ls='ls -alh --color=auto'
 alias gem='rvmsudo gem'
 alias cat="grc cat"
