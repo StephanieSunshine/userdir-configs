@@ -9,11 +9,14 @@ export rvmsudo_secure_path=1
 
 eval "`dircolors`"
 
-alias production='RAILS_ENV=production RACK_ENV=production RUBY_ENV=production'
-alias development='RAILS_ENV=development RACK_ENV=development RUBY_ENV=development'
+#Adds Rails binstubs to the path :)
+export PATH=$PATH:bin
+export RAILS_PROD='RAILS_ENV=production RACK_ENV=production RUBY_ENV=production'
+export RAILS_DEV='RAILS_ENV=development RACK_ENV=development RUBY_ENV=development'
 
 alias ls='ls -alh --color=auto'
-alias gem='rvmsudo gem'
+
+#alias gem='rvmsudo gem'
 alias cat="grc cat"
 alias head="grc head"
 alias tail="grc tail"
@@ -28,7 +31,7 @@ alias df="grc df"
 alias netstat="grc netstat"
 
 alias apt="sudo apt"
-alias top="glances"
+alias top="htop"
 alias ssh="ssh -AX"
 alias sshfs="sshfs -C -o reconnect,follow_symlinks,large_read,intr"
 alias systemctl="sudo systemctl"
