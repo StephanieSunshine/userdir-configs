@@ -28,7 +28,7 @@ alias ps="grc ps"
 alias ifconfig="sudo grc ifconfig"
 alias traceroute="sudo grc -c conf.traceroute tcptraceroute"
 alias df="grc df"
-alias netstat="grc netstat"
+alias netstat="sudo grc netstat"
 
 alias apt="sudo apt"
 alias top="htop"
