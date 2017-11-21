@@ -15,6 +15,7 @@ export RAILS_PROD='RAILS_ENV=production RACK_ENV=production RUBY_ENV=production'
 export RAILS_DEV='RAILS_ENV=development RACK_ENV=development RUBY_ENV=development'
 
 alias ls='ls -alh --color=auto'
+alias less='/usr/share/source-highlight/src-hilite-lesspipe.sh'
 
 #alias gem='rvmsudo gem'
 alias cat="grc cat"
